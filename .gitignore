@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# dados do INEP (baixe com o passo 1 do README)
+data/
+# predições completas (~50 MB); regeneradas por scripts/05_modelos_finais.py
+outputs/predicoes_*.parquet
+~$*.docx
