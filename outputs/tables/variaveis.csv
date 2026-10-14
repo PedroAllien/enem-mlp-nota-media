@@ -1,0 +1,32 @@
+,descrição,tipo,n_categorias,% ausente 2022,% ausente 2023
+TP_FAIXA_ETARIA,Faixa etária,ordinal (20 faixas),20,0.0,0.0
+TP_ST_CONCLUSAO,Situação de conclusão do EM,nominal,4,0.0,0.0
+TP_ANO_CONCLUIU,Anos desde a conclusão do EM (0 = não informado; 16 = 16 ou mais),ordinal,17,0.0,0.0
+TP_ESCOLA,"Tipo de escola do EM (1 = não respondeu, 2 = pública, 3 = privada)",nominal,3,0.0,0.0
+TP_DEPENDENCIA_ADM_ESC,Dependência administrativa da escola,nominal,4,70.44996974695474,73.03467815672175
+TP_LOCALIZACAO_ESC,Localização da escola (urbana/rural),nominal,2,70.44996974695474,73.03467815672175
+SG_UF_PROVA,UF da prova,nominal (27),27,0.0,0.0
+Q001,Escolaridade do pai/responsável,ordinal + 'não sei',8,0.0,0.0
+Q002,Escolaridade da mãe/responsável,ordinal + 'não sei',8,0.0,0.0
+Q006,Renda familiar mensal (17 faixas),ordinal,17,0.0,0.0
+Q007,Característica/bem da residência,ordinal,4,0.0,0.0
+Q008,Característica/bem da residência,ordinal,5,0.0,0.0
+Q009,Característica/bem da residência,ordinal,5,0.0,0.0
+Q010,Característica/bem da residência,ordinal,5,0.0,0.0
+Q011,Característica/bem da residência,ordinal,5,0.0,0.0
+Q012,Característica/bem da residência,ordinal,5,0.0,0.0
+Q013,Característica/bem da residência,ordinal,5,0.0,0.0
+Q014,Característica/bem da residência,ordinal,5,0.0,0.0
+Q015,Característica/bem da residência,ordinal,5,0.0,0.0
+Q016,Característica/bem da residência,ordinal,5,0.0,0.0
+Q017,Característica/bem da residência,ordinal,5,0.0,0.0
+Q018,Característica/bem da residência,ordinal,2,0.0,0.0
+Q019,Característica/bem da residência,ordinal,5,0.0,0.0
+Q020,Característica/bem da residência,ordinal,2,0.0,0.0
+Q021,Característica/bem da residência,ordinal,2,0.0,0.0
+Q022,Característica/bem da residência,ordinal,5,0.0,0.0
+Q023,Característica/bem da residência,ordinal,2,0.0,0.0
+Q024,Computador na residência,ordinal,5,0.0,0.0
+Q025,Acesso à internet,binária,2,0.0,0.0
+Q005,Nº de moradores na residência,numérica (1–20),20,0.0,0.0
+CO_MUNICIPIO_PROVA,Município da prova,nominal (alta cardinalidade),1747,0.0,0.0

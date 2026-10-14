@@ -1,0 +1,32 @@
+n20k_d0_w0         params=   28,082  best_val=71.18 final train/val=66.85/73.22 t=8s
+n20k_d1_w32        params=   34,625  best_val=70.56 final train/val=46.13/86.20 t=11s
+n20k_d1_w128       params=   54,881  best_val=70.56 final train/val=21.03/99.57 t=12s
+n20k_d1_w512       params=  135,905  best_val=70.71 final train/val=8.80/92.99 t=13s
+n20k_d2_w32        params=   35,681  best_val=70.62 final train/val=40.65/90.10 t=14s
+n20k_d2_w128       params=   71,393  best_val=70.74 final train/val=8.59/99.56 t=15s
+n20k_d2_w512       params=  398,561  best_val=70.88 final train/val=8.46/81.33 t=21s
+n20k_d3_w32        params=   36,737  best_val=70.70 final train/val=38.40/91.09 t=16s
+n20k_d3_w128       params=   87,905  best_val=70.74 final train/val=8.79/94.15 t=18s
+n20k_d3_w512       params=  661,217  best_val=70.95 final train/val=6.46/78.92 t=29s
+n20k_d4_w32        params=   37,793  best_val=70.79 final train/val=37.22/92.66 t=20s
+n20k_d4_w128       params=  104,417  best_val=70.79 final train/val=8.93/90.39 t=21s
+n20k_d4_w512       params=  923,873  best_val=70.96 final train/val=11.44/80.96 t=37s
+n20k_d6_w32        params=   39,905  best_val=70.80 final train/val=37.18/94.09 t=24s
+n20k_d6_w128       params=  137,441  best_val=70.80 final train/val=9.30/88.80 t=29s
+n20k_d6_w512       params=1,449,185  best_val=71.25 final train/val=4.78/80.64 t=104s
+n500k_d0_w0        params=   28,082  best_val=70.10 final train/val=69.94/70.11 t=6s
+n500k_d1_w32       params=   34,625  best_val=68.99 final train/val=67.98/69.07 t=8s
+n500k_d1_w128      params=   54,881  best_val=69.03 final train/val=66.68/69.48 t=9s
+n500k_d1_w512      params=  135,905  best_val=69.07 final train/val=63.01/71.54 t=20s
+n500k_d2_w32       params=   35,681  best_val=69.05 final train/val=67.83/69.17 t=10s
+n500k_d2_w128      params=   71,393  best_val=69.06 final train/val=65.14/70.69 t=11s
+n500k_d2_w512      params=  398,561  best_val=69.15 final train/val=47.33/80.74 t=39s
+n500k_d3_w32       params=   36,737  best_val=69.03 final train/val=67.80/69.09 t=12s
+n500k_d3_w128      params=   87,905  best_val=69.11 final train/val=64.33/71.14 t=15s
+n500k_d3_w512      params=  661,217  best_val=69.29 final train/val=37.68/85.03 t=59s
+n500k_d4_w32       params=   37,793  best_val=68.98 final train/val=67.86/69.03 t=14s
+n500k_d4_w128      params=  104,417  best_val=69.07 final train/val=63.39/71.59 t=18s
+n500k_d4_w512      params=  923,873  best_val=69.22 final train/val=34.93/84.51 t=84s
+n500k_d6_w32       params=   39,905  best_val=68.94 final train/val=67.95/69.01 t=18s
+n500k_d6_w128      params=  137,441  best_val=69.12 final train/val=63.92/71.38 t=22s
+n500k_d6_w512      params=1,449,185  best_val=69.18 final train/val=35.03/84.64 t=124s
