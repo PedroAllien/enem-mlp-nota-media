@@ -18,6 +18,27 @@ socioeconômico da inscrição, situação escolar, faixa etária e local da pro
 As edições 2024 e 2025 não servem para este problema: o INEP passou a publicar questionário e notas em
 arquivos separados, sem chave de ligação (Leia-Me ENEM 2024).
 
+## Resultados
+
+Média de 3 sementes. RMSE em pontos da escala do ENEM; teste-2023 = ano nunca visto no treino.
+
+| Modelo | Parâmetros | Treino (s) | RMSE teste-2022 | R² teste-2022 | RMSE teste-2023 | R² teste-2023 |
+|---|---:|---:|---:|---:|---:|---:|
+| Prever a média do treino | 1 | – | 87,77 | 0,000 | 92,97 | 0,000 |
+| Regressão linear (MLP sem camada oculta) | 28.082 | 10 | 70,18 | 0,361 | 74,77 | 0,353 |
+| **A – melhor do Optuna** (2×658, SiLU, LayerNorm, dropout 0,46) | 602.965 | 542 | **68,45** | **0,392** | **72,92** | **0,385** |
+| B – compacta (1×173) | 64.722 | 141 | 68,53 | 0,390 | 73,05 | 0,383 |
+| C – profunda (380→190→95→47) | 204.191 | 342 | 68,54 | 0,390 | 73,03 | 0,383 |
+
+Principais achados:
+
+- Uma camada oculta já captura o ganho sobre o modelo linear; profundidade e largura quase não importam (importância fANOVA ≤ 0,03 no Optuna).
+- Regularização e volume de dados importam mais: com 500 mil exemplos, L2/L1/dropout eliminam o overfitting; com 20 mil, só o early stopping funciona.
+- O R² se mantém em 2023; o RMSE sobe porque as notas de 2023 são mais dispersas.
+- As predições são comprimidas para o centro (regressão à média) e há viés residual por cor/raça: o modelo serve para análise de grupos, não para decisões individuais.
+
+O relatório completo está em `relatorio/Relatorio_MLP_ENEM.docx`.
+
 ## Estrutura
 
 ```
@@ -36,6 +57,8 @@ scripts/
   03_regularizacao.py      dropout, L1, L2, BatchNorm, LayerNorm, early stopping
   04_optuna.py             busca de hiperparâmetros (TPE + MedianPruner, 60 trials)
   05_modelos_finais.py     3 arquiteturas + referências, treino completo, 3 sementes, testes 2022/2023
+  03b_diagnostico_l2.py    diagnóstico: por que L1/L2 não seguraram o overfitting com 20 mil exemplos
+  diagrama_arquitetura.py  figura da arquitetura
   build_notebooks.py       gera os notebooks
 notebooks/
   01_analise_exploratoria.ipynb
@@ -45,6 +68,10 @@ outputs/
   runs/                    histórico completo de cada treino (JSON)
   optuna.db                estudo Optuna (SQLite) - registro da busca
   modelos/                 pesos dos modelos finais (semente 0)
+  logs/                    saída dos scripts
+relatorio/
+  Relatorio_MLP_ENEM.docx  relatório técnico
+  gerador/                 script Node que monta o .docx a partir de outputs/
 ```
 
 ## Como reproduzir
