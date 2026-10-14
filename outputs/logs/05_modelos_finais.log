@@ -1,0 +1,487 @@
+{
+ "A_melhor": {
+  "trial": 33,
+  "val_rmse_optuna": 68.8442153930664,
+  "params": {
+   "n_camadas": 2,
+   "largura": 658,
+   "formato": "constante",
+   "ativacao": "silu",
+   "dropout": 0.45938362740327915,
+   "normalizacao": "layer",
+   "l2": 5.07346168617052e-06,
+   "lr": 0.00045434011974226056,
+   "batch_size": 1024,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   658,
+   658
+  ]
+ },
+ "B_compacta": {
+  "trial": 46,
+  "val_rmse_optuna": 68.95785522460938,
+  "params": {
+   "n_camadas": 1,
+   "largura": 173,
+   "formato": "constante",
+   "ativacao": "silu",
+   "dropout": 0.4102315974580079,
+   "normalizacao": "layer",
+   "l2": 4.801366751657585e-06,
+   "lr": 0.001920983617698153,
+   "batch_size": 1024,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   173
+  ]
+ },
+ "C_contraste": {
+  "trial": 16,
+  "val_rmse_optuna": 69.01148223876953,
+  "params": {
+   "n_camadas": 4,
+   "largura": 380,
+   "formato": "funil",
+   "ativacao": "relu",
+   "dropout": 0.2749460065690797,
+   "normalizacao": "layer",
+   "l2": 6.382254211142932e-06,
+   "lr": 0.000683589697991556,
+   "batch_size": 512,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   380,
+   190,
+   95,
+   47
+  ]
+ }
+}
+ep   1  train 70.61  val 70.52  r2 0.3558  lr 3.0e-03  1s
+ep   2  train 70.36  val 70.25  r2 0.3607  lr 3.0e-03  1s
+ep   3  train 70.31  val 70.22  r2 0.3612  lr 3.0e-03  2s
+ep   4  train 70.32  val 70.22  r2 0.3613  lr 3.0e-03  2s
+ep   5  train 70.31  val 70.22  r2 0.3612  lr 3.0e-03  2s
+ep   6  train 70.30  val 70.21  r2 0.3614  lr 3.0e-03  3s
+ep   7  train 70.32  val 70.23  r2 0.3611  lr 3.0e-03  3s
+ep   8  train 70.30  val 70.21  r2 0.3613  lr 3.0e-03  3s
+ep   9  train 70.32  val 70.22  r2 0.3612  lr 3.0e-03  4s
+ep  10  train 70.33  val 70.26  r2 0.3605  lr 1.5e-03  4s
+ep  11  train 70.27  val 70.18  r2 0.3620  lr 1.5e-03  5s
+ep  12  train 70.27  val 70.18  r2 0.3619  lr 1.5e-03  5s
+ep  13  train 70.29  val 70.19  r2 0.3618  lr 1.5e-03  5s
+ep  14  train 70.30  val 70.19  r2 0.3618  lr 1.5e-03  6s
+ep  15  train 70.27  val 70.18  r2 0.3620  lr 7.5e-04  6s
+ep  16  train 70.26  val 70.17  r2 0.3621  lr 7.5e-04  6s
+ep  17  train 70.26  val 70.17  r2 0.3621  lr 7.5e-04  7s
+ep  18  train 70.26  val 70.18  r2 0.3620  lr 7.5e-04  7s
+ep  19  train 70.27  val 70.17  r2 0.3621  lr 7.5e-04  7s
+ep  20  train 70.27  val 70.17  r2 0.3621  lr 3.8e-04  8s
+ep  21  train 70.26  val 70.17  r2 0.3622  lr 3.8e-04  8s
+ep  22  train 70.25  val 70.17  r2 0.3622  lr 3.8e-04  8s
+ep  23  train 70.26  val 70.16  r2 0.3622  lr 1.9e-04  9s
+ep  24  train 70.26  val 70.16  r2 0.3622  lr 1.9e-04  9s
+ep  25  train 70.27  val 70.17  r2 0.3621  lr 1.9e-04  9s
+ep  26  train 70.25  val 70.16  r2 0.3623  lr 9.4e-05  10s
+ep  27  train 70.25  val 70.16  r2 0.3622  lr 9.4e-05  10s
+ep  28  train 70.26  val 70.16  r2 0.3623  lr 9.4e-05  10s
+ep  29  train 70.26  val 70.16  r2 0.3623  lr 9.4e-05  11s
+ep  30  train 70.26  val 70.16  r2 0.3623  lr 4.7e-05  11s
+ep  31  train 70.26  val 70.16  r2 0.3623  lr 4.7e-05  11s
+== linear seed 0: val 70.16  test22 70.18  test23 74.77  (11s)
+ep   1  train 70.57  val 70.44  r2 0.3572  lr 3.0e-03  0s
+ep   2  train 70.36  val 70.22  r2 0.3612  lr 3.0e-03  1s
+ep   3  train 70.33  val 70.21  r2 0.3614  lr 3.0e-03  1s
+ep   4  train 70.33  val 70.20  r2 0.3616  lr 3.0e-03  1s
+ep   5  train 70.35  val 70.21  r2 0.3613  lr 3.0e-03  2s
+ep   6  train 70.35  val 70.21  r2 0.3613  lr 3.0e-03  2s
+ep   7  train 70.34  val 70.20  r2 0.3615  lr 3.0e-03  2s
+ep   8  train 70.31  val 70.18  r2 0.3620  lr 1.5e-03  3s
+ep   9  train 70.32  val 70.19  r2 0.3618  lr 1.5e-03  3s
+ep  10  train 70.32  val 70.20  r2 0.3617  lr 1.5e-03  3s
+ep  11  train 70.30  val 70.19  r2 0.3618  lr 1.5e-03  4s
+ep  12  train 70.29  val 70.17  r2 0.3621  lr 7.5e-04  4s
+ep  13  train 70.29  val 70.18  r2 0.3620  lr 7.5e-04  4s
+ep  14  train 70.29  val 70.18  r2 0.3619  lr 7.5e-04  5s
+ep  15  train 70.29  val 70.17  r2 0.3622  lr 3.8e-04  5s
+ep  16  train 70.29  val 70.17  r2 0.3622  lr 3.8e-04  5s
+ep  17  train 70.29  val 70.17  r2 0.3622  lr 3.8e-04  6s
+ep  18  train 70.29  val 70.17  r2 0.3622  lr 3.8e-04  6s
+ep  19  train 70.29  val 70.16  r2 0.3622  lr 1.9e-04  6s
+ep  20  train 70.29  val 70.17  r2 0.3622  lr 1.9e-04  7s
+ep  21  train 70.28  val 70.16  r2 0.3622  lr 1.9e-04  7s
+ep  22  train 70.28  val 70.16  r2 0.3623  lr 9.4e-05  8s
+ep  23  train 70.28  val 70.16  r2 0.3623  lr 9.4e-05  8s
+ep  24  train 70.28  val 70.16  r2 0.3623  lr 9.4e-05  8s
+ep  25  train 70.28  val 70.16  r2 0.3623  lr 4.7e-05  9s
+ep  26  train 70.28  val 70.16  r2 0.3623  lr 4.7e-05  9s
+ep  27  train 70.28  val 70.16  r2 0.3623  lr 4.7e-05  9s
+== linear seed 1: val 70.16  test22 70.18  test23 74.77  (9s)
+ep   1  train 70.48  val 70.46  r2 0.3569  lr 3.0e-03  0s
+ep   2  train 70.23  val 70.26  r2 0.3605  lr 3.0e-03  1s
+ep   3  train 70.18  val 70.24  r2 0.3609  lr 3.0e-03  1s
+ep   4  train 70.17  val 70.20  r2 0.3617  lr 3.0e-03  1s
+ep   5  train 70.17  val 70.22  r2 0.3613  lr 3.0e-03  2s
+ep   6  train 70.17  val 70.21  r2 0.3614  lr 3.0e-03  2s
+ep   7  train 70.20  val 70.24  r2 0.3608  lr 3.0e-03  2s
+ep   8  train 70.17  val 70.21  r2 0.3615  lr 1.5e-03  3s
+ep   9  train 70.14  val 70.18  r2 0.3619  lr 1.5e-03  3s
+ep  10  train 70.17  val 70.21  r2 0.3614  lr 1.5e-03  3s
+ep  11  train 70.14  val 70.18  r2 0.3619  lr 1.5e-03  4s
+ep  12  train 70.14  val 70.18  r2 0.3619  lr 1.5e-03  4s
+ep  13  train 70.13  val 70.18  r2 0.3619  lr 7.5e-04  4s
+ep  14  train 70.13  val 70.18  r2 0.3619  lr 7.5e-04  5s
+ep  15  train 70.14  val 70.19  r2 0.3617  lr 7.5e-04  5s
+ep  16  train 70.12  val 70.17  r2 0.3622  lr 3.8e-04  5s
+ep  17  train 70.12  val 70.17  r2 0.3621  lr 3.8e-04  6s
+ep  18  train 70.12  val 70.17  r2 0.3621  lr 3.8e-04  6s
+ep  19  train 70.12  val 70.17  r2 0.3622  lr 3.8e-04  6s
+ep  20  train 70.11  val 70.16  r2 0.3622  lr 1.9e-04  7s
+ep  21  train 70.12  val 70.16  r2 0.3622  lr 1.9e-04  7s
+ep  22  train 70.11  val 70.17  r2 0.3622  lr 1.9e-04  8s
+ep  23  train 70.12  val 70.16  r2 0.3622  lr 9.4e-05  8s
+ep  24  train 70.11  val 70.16  r2 0.3622  lr 9.4e-05  8s
+ep  25  train 70.11  val 70.16  r2 0.3623  lr 9.4e-05  9s
+ep  26  train 70.11  val 70.16  r2 0.3623  lr 4.7e-05  9s
+ep  27  train 70.12  val 70.17  r2 0.3622  lr 4.7e-05  9s
+ep  28  train 70.11  val 70.16  r2 0.3623  lr 4.7e-05  10s
+ep  29  train 70.11  val 70.16  r2 0.3623  lr 2.3e-05  10s
+ep  30  train 70.11  val 70.16  r2 0.3623  lr 2.3e-05  10s
+== linear seed 2: val 70.16  test22 70.18  test23 74.76  (10s)
+ep   1  train 69.68  val 69.62  r2 0.3721  lr 4.5e-04  10s
+ep   2  train 69.22  val 69.22  r2 0.3793  lr 4.5e-04  21s
+ep   3  train 69.21  val 69.23  r2 0.3791  lr 4.5e-04  38s
+ep   4  train 68.89  val 68.92  r2 0.3846  lr 4.5e-04  54s
+ep   5  train 68.84  val 68.89  r2 0.3853  lr 4.5e-04  67s
+ep   6  train 68.73  val 68.84  r2 0.3862  lr 4.5e-04  80s
+ep   7  train 68.90  val 68.97  r2 0.3838  lr 4.5e-04  91s
+ep   8  train 68.58  val 68.68  r2 0.3890  lr 4.5e-04  103s
+ep   9  train 68.58  val 68.69  r2 0.3887  lr 4.5e-04  114s
+ep  10  train 68.61  val 68.71  r2 0.3884  lr 4.5e-04  126s
+ep  11  train 68.60  val 68.74  r2 0.3878  lr 4.5e-04  137s
+ep  12  train 68.47  val 68.62  r2 0.3900  lr 2.3e-04  149s
+ep  13  train 68.45  val 68.61  r2 0.3902  lr 2.3e-04  161s
+ep  14  train 68.47  val 68.63  r2 0.3899  lr 2.3e-04  173s
+ep  15  train 68.37  val 68.56  r2 0.3911  lr 2.3e-04  185s
+ep  16  train 68.33  val 68.53  r2 0.3916  lr 2.3e-04  196s
+ep  17  train 68.35  val 68.56  r2 0.3911  lr 2.3e-04  208s
+ep  18  train 68.33  val 68.55  r2 0.3913  lr 2.3e-04  220s
+ep  19  train 68.28  val 68.51  r2 0.3920  lr 2.3e-04  232s
+ep  20  train 68.40  val 68.63  r2 0.3899  lr 2.3e-04  243s
+ep  21  train 68.24  val 68.50  r2 0.3921  lr 2.3e-04  254s
+ep  22  train 68.22  val 68.49  r2 0.3924  lr 2.3e-04  265s
+ep  23  train 68.21  val 68.47  r2 0.3927  lr 2.3e-04  277s
+ep  24  train 68.23  val 68.49  r2 0.3924  lr 2.3e-04  288s
+ep  25  train 68.36  val 68.62  r2 0.3900  lr 2.3e-04  299s
+ep  26  train 68.17  val 68.47  r2 0.3926  lr 2.3e-04  311s
+ep  27  train 68.15  val 68.46  r2 0.3929  lr 1.1e-04  323s
+ep  28  train 68.14  val 68.46  r2 0.3928  lr 1.1e-04  334s
+ep  29  train 68.14  val 68.46  r2 0.3929  lr 1.1e-04  346s
+ep  30  train 68.11  val 68.43  r2 0.3933  lr 1.1e-04  359s
+ep  31  train 68.10  val 68.43  r2 0.3934  lr 1.1e-04  376s
+ep  32  train 68.09  val 68.44  r2 0.3933  lr 1.1e-04  392s
+ep  33  train 68.09  val 68.43  r2 0.3934  lr 1.1e-04  413s
+ep  34  train 68.08  val 68.43  r2 0.3933  lr 5.7e-05  430s
+ep  35  train 68.04  val 68.41  r2 0.3937  lr 5.7e-05  445s
+ep  36  train 68.03  val 68.41  r2 0.3937  lr 5.7e-05  461s
+ep  37  train 68.03  val 68.41  r2 0.3937  lr 5.7e-05  478s
+ep  38  train 68.03  val 68.40  r2 0.3939  lr 5.7e-05  492s
+ep  39  train 68.03  val 68.41  r2 0.3937  lr 5.7e-05  506s
+ep  40  train 68.02  val 68.40  r2 0.3939  lr 5.7e-05  519s
+== A_melhor seed 0: val 68.40  test22 68.45  test23 72.91  (519s)
+ep   1  train 69.73  val 69.67  r2 0.3711  lr 4.5e-04  17s
+ep   2  train 69.27  val 69.19  r2 0.3797  lr 4.5e-04  32s
+ep   3  train 69.06  val 69.08  r2 0.3818  lr 4.5e-04  47s
+ep   4  train 68.93  val 68.90  r2 0.3851  lr 4.5e-04  64s
+ep   5  train 68.89  val 68.88  r2 0.3854  lr 4.5e-04  80s
+ep   6  train 68.78  val 68.77  r2 0.3874  lr 4.5e-04  95s
+ep   7  train 68.76  val 68.77  r2 0.3873  lr 4.5e-04  110s
+ep   8  train 68.68  val 68.72  r2 0.3882  lr 4.5e-04  128s
+ep   9  train 68.63  val 68.70  r2 0.3885  lr 4.5e-04  156s
+ep  10  train 68.62  val 68.68  r2 0.3890  lr 4.5e-04  174s
+ep  11  train 68.57  val 68.64  r2 0.3896  lr 4.5e-04  189s
+ep  12  train 68.55  val 68.65  r2 0.3895  lr 4.5e-04  203s
+ep  13  train 68.55  val 68.65  r2 0.3894  lr 4.5e-04  221s
+ep  14  train 68.50  val 68.62  r2 0.3901  lr 4.5e-04  237s
+ep  15  train 68.61  val 68.68  r2 0.3889  lr 4.5e-04  253s
+ep  16  train 68.54  val 68.67  r2 0.3891  lr 4.5e-04  270s
+ep  17  train 68.41  val 68.56  r2 0.3910  lr 4.5e-04  283s
+ep  18  train 68.43  val 68.57  r2 0.3909  lr 4.5e-04  295s
+ep  19  train 68.53  val 68.66  r2 0.3893  lr 4.5e-04  307s
+ep  20  train 68.36  val 68.54  r2 0.3915  lr 4.5e-04  320s
+ep  21  train 68.32  val 68.52  r2 0.3917  lr 4.5e-04  332s
+ep  22  train 68.37  val 68.59  r2 0.3906  lr 4.5e-04  345s
+ep  23  train 68.32  val 68.53  r2 0.3917  lr 4.5e-04  357s
+ep  24  train 68.33  val 68.55  r2 0.3913  lr 4.5e-04  370s
+ep  25  train 68.22  val 68.48  r2 0.3924  lr 2.3e-04  383s
+ep  26  train 68.21  val 68.47  r2 0.3926  lr 2.3e-04  396s
+ep  27  train 68.19  val 68.50  r2 0.3922  lr 2.3e-04  409s
+ep  28  train 68.17  val 68.47  r2 0.3927  lr 2.3e-04  425s
+ep  29  train 68.14  val 68.44  r2 0.3931  lr 2.3e-04  439s
+ep  30  train 68.18  val 68.48  r2 0.3924  lr 2.3e-04  453s
+ep  31  train 68.17  val 68.52  r2 0.3918  lr 2.3e-04  466s
+ep  32  train 68.16  val 68.50  r2 0.3922  lr 2.3e-04  479s
+ep  33  train 68.06  val 68.41  r2 0.3936  lr 1.1e-04  492s
+ep  34  train 68.08  val 68.43  r2 0.3933  lr 1.1e-04  505s
+ep  35  train 68.03  val 68.42  r2 0.3936  lr 1.1e-04  518s
+ep  36  train 68.06  val 68.43  r2 0.3934  lr 1.1e-04  530s
+ep  37  train 68.00  val 68.39  r2 0.3940  lr 5.7e-05  542s
+ep  38  train 68.00  val 68.40  r2 0.3940  lr 5.7e-05  554s
+ep  39  train 68.00  val 68.40  r2 0.3940  lr 5.7e-05  566s
+ep  40  train 68.00  val 68.40  r2 0.3939  lr 5.7e-05  578s
+== A_melhor seed 1: val 68.39  test22 68.44  test23 72.92  (578s)
+ep   1  train 69.62  val 69.58  r2 0.3727  lr 4.5e-04  12s
+ep   2  train 69.25  val 69.27  r2 0.3783  lr 4.5e-04  23s
+ep   3  train 69.00  val 69.04  r2 0.3824  lr 4.5e-04  34s
+ep   4  train 68.87  val 68.89  r2 0.3851  lr 4.5e-04  46s
+ep   5  train 68.74  val 68.82  r2 0.3864  lr 4.5e-04  57s
+ep   6  train 68.83  val 68.92  r2 0.3847  lr 4.5e-04  69s
+ep   7  train 68.64  val 68.76  r2 0.3874  lr 4.5e-04  80s
+ep   8  train 68.68  val 68.82  r2 0.3865  lr 4.5e-04  92s
+ep   9  train 68.63  val 68.77  r2 0.3873  lr 4.5e-04  104s
+ep  10  train 68.53  val 68.69  r2 0.3888  lr 4.5e-04  116s
+ep  11  train 68.49  val 68.67  r2 0.3890  lr 4.5e-04  127s
+ep  12  train 68.50  val 68.68  r2 0.3889  lr 4.5e-04  138s
+ep  13  train 68.43  val 68.64  r2 0.3897  lr 4.5e-04  149s
+ep  14  train 68.46  val 68.70  r2 0.3886  lr 4.5e-04  160s
+ep  15  train 68.45  val 68.67  r2 0.3891  lr 4.5e-04  172s
+ep  16  train 68.39  val 68.64  r2 0.3897  lr 4.5e-04  183s
+ep  17  train 68.25  val 68.52  r2 0.3918  lr 2.3e-04  194s
+ep  18  train 68.28  val 68.55  r2 0.3912  lr 2.3e-04  209s
+ep  19  train 68.22  val 68.50  r2 0.3921  lr 2.3e-04  224s
+ep  20  train 68.20  val 68.51  r2 0.3920  lr 2.3e-04  239s
+ep  21  train 68.17  val 68.48  r2 0.3925  lr 2.3e-04  252s
+ep  22  train 68.19  val 68.51  r2 0.3920  lr 2.3e-04  265s
+ep  23  train 68.17  val 68.49  r2 0.3922  lr 2.3e-04  280s
+ep  24  train 68.18  val 68.49  r2 0.3922  lr 2.3e-04  294s
+ep  25  train 68.14  val 68.47  r2 0.3926  lr 1.1e-04  308s
+ep  26  train 68.08  val 68.44  r2 0.3931  lr 1.1e-04  321s
+ep  27  train 68.10  val 68.47  r2 0.3927  lr 1.1e-04  334s
+ep  28  train 68.08  val 68.44  r2 0.3932  lr 1.1e-04  348s
+ep  29  train 68.06  val 68.43  r2 0.3934  lr 1.1e-04  362s
+ep  30  train 68.08  val 68.45  r2 0.3929  lr 1.1e-04  381s
+ep  31  train 68.04  val 68.43  r2 0.3933  lr 1.1e-04  394s
+ep  32  train 68.03  val 68.43  r2 0.3934  lr 1.1e-04  407s
+ep  33  train 68.02  val 68.43  r2 0.3934  lr 5.7e-05  420s
+ep  34  train 68.02  val 68.42  r2 0.3935  lr 5.7e-05  433s
+ep  35  train 68.00  val 68.42  r2 0.3935  lr 5.7e-05  446s
+ep  36  train 68.02  val 68.43  r2 0.3934  lr 5.7e-05  462s
+ep  37  train 67.99  val 68.41  r2 0.3937  lr 5.7e-05  482s
+ep  38  train 67.98  val 68.41  r2 0.3937  lr 5.7e-05  500s
+ep  39  train 67.97  val 68.41  r2 0.3937  lr 5.7e-05  515s
+ep  40  train 67.97  val 68.42  r2 0.3936  lr 5.7e-05  529s
+== A_melhor seed 2: val 68.41  test22 68.45  test23 72.93  (529s)
+ep   1  train 69.62  val 69.58  r2 0.3729  lr 1.9e-03  4s
+ep   2  train 69.19  val 69.16  r2 0.3803  lr 1.9e-03  7s
+ep   3  train 69.14  val 69.14  r2 0.3807  lr 1.9e-03  10s
+ep   4  train 68.89  val 68.90  r2 0.3850  lr 1.9e-03  13s
+ep   5  train 68.91  val 68.94  r2 0.3843  lr 1.9e-03  16s
+ep   6  train 68.84  val 68.93  r2 0.3845  lr 1.9e-03  19s
+ep   7  train 68.91  val 68.97  r2 0.3837  lr 1.9e-03  22s
+ep   8  train 68.58  val 68.69  r2 0.3888  lr 9.6e-04  26s
+ep   9  train 68.60  val 68.69  r2 0.3887  lr 9.6e-04  30s
+ep  10  train 68.58  val 68.68  r2 0.3889  lr 9.6e-04  33s
+ep  11  train 68.59  val 68.71  r2 0.3885  lr 9.6e-04  36s
+ep  12  train 68.52  val 68.65  r2 0.3896  lr 4.8e-04  39s
+ep  13  train 68.49  val 68.64  r2 0.3896  lr 4.8e-04  42s
+ep  14  train 68.46  val 68.60  r2 0.3903  lr 4.8e-04  45s
+ep  15  train 68.46  val 68.60  r2 0.3904  lr 4.8e-04  48s
+ep  16  train 68.48  val 68.65  r2 0.3895  lr 4.8e-04  51s
+ep  17  train 68.44  val 68.61  r2 0.3902  lr 4.8e-04  54s
+ep  18  train 68.37  val 68.55  r2 0.3912  lr 2.4e-04  57s
+ep  19  train 68.37  val 68.55  r2 0.3913  lr 2.4e-04  61s
+ep  20  train 68.40  val 68.57  r2 0.3910  lr 2.4e-04  64s
+ep  21  train 68.38  val 68.55  r2 0.3912  lr 2.4e-04  67s
+ep  22  train 68.34  val 68.52  r2 0.3917  lr 1.2e-04  70s
+ep  23  train 68.34  val 68.52  r2 0.3917  lr 1.2e-04  73s
+ep  24  train 68.35  val 68.54  r2 0.3915  lr 1.2e-04  77s
+ep  25  train 68.34  val 68.53  r2 0.3916  lr 1.2e-04  80s
+ep  26  train 68.32  val 68.51  r2 0.3920  lr 6.0e-05  83s
+ep  27  train 68.32  val 68.52  r2 0.3919  lr 6.0e-05  86s
+ep  28  train 68.32  val 68.51  r2 0.3920  lr 6.0e-05  89s
+ep  29  train 68.31  val 68.51  r2 0.3920  lr 6.0e-05  91s
+ep  30  train 68.31  val 68.51  r2 0.3920  lr 3.0e-05  94s
+ep  31  train 68.31  val 68.51  r2 0.3920  lr 3.0e-05  97s
+ep  32  train 68.31  val 68.51  r2 0.3920  lr 3.0e-05  99s
+ep  33  train 68.31  val 68.51  r2 0.3920  lr 1.5e-05  102s
+ep  34  train 68.31  val 68.51  r2 0.3920  lr 1.5e-05  105s
+ep  35  train 68.30  val 68.50  r2 0.3920  lr 1.5e-05  108s
+ep  36  train 68.30  val 68.50  r2 0.3921  lr 7.5e-06  110s
+ep  37  train 68.31  val 68.51  r2 0.3920  lr 7.5e-06  113s
+ep  38  train 68.30  val 68.50  r2 0.3921  lr 7.5e-06  116s
+ep  39  train 68.30  val 68.50  r2 0.3921  lr 3.8e-06  118s
+ep  40  train 68.30  val 68.50  r2 0.3921  lr 3.8e-06  121s
+== B_compacta seed 0: val 68.50  test22 68.55  test23 73.05  (121s)
+ep   1  train 69.69  val 69.62  r2 0.3721  lr 1.9e-03  3s
+ep   2  train 69.25  val 69.11  r2 0.3813  lr 1.9e-03  6s
+ep   3  train 69.10  val 69.05  r2 0.3824  lr 1.9e-03  9s
+ep   4  train 68.99  val 68.91  r2 0.3849  lr 1.9e-03  12s
+ep   5  train 68.99  val 68.93  r2 0.3844  lr 1.9e-03  15s
+ep   6  train 68.85  val 68.81  r2 0.3866  lr 1.9e-03  18s
+ep   7  train 68.87  val 68.85  r2 0.3858  lr 1.9e-03  22s
+ep   8  train 68.79  val 68.78  r2 0.3871  lr 1.9e-03  25s
+ep   9  train 68.76  val 68.75  r2 0.3876  lr 1.9e-03  29s
+ep  10  train 68.72  val 68.76  r2 0.3875  lr 1.9e-03  31s
+ep  11  train 68.67  val 68.72  r2 0.3882  lr 1.9e-03  34s
+ep  12  train 68.65  val 68.72  r2 0.3883  lr 1.9e-03  37s
+ep  13  train 68.67  val 68.76  r2 0.3876  lr 1.9e-03  40s
+ep  14  train 68.60  val 68.72  r2 0.3882  lr 1.9e-03  44s
+ep  15  train 68.54  val 68.64  r2 0.3896  lr 9.6e-04  47s
+ep  16  train 68.54  val 68.67  r2 0.3891  lr 9.6e-04  50s
+ep  17  train 68.47  val 68.62  r2 0.3899  lr 9.6e-04  53s
+ep  18  train 68.44  val 68.61  r2 0.3902  lr 9.6e-04  59s
+ep  19  train 68.45  val 68.61  r2 0.3901  lr 9.6e-04  69s
+ep  20  train 68.43  val 68.61  r2 0.3901  lr 9.6e-04  76s
+ep  21  train 68.42  val 68.61  r2 0.3902  lr 9.6e-04  89s
+ep  22  train 68.35  val 68.55  r2 0.3913  lr 4.8e-04  97s
+ep  23  train 68.32  val 68.53  r2 0.3917  lr 4.8e-04  105s
+ep  24  train 68.37  val 68.58  r2 0.3907  lr 4.8e-04  117s
+ep  25  train 68.34  val 68.57  r2 0.3909  lr 4.8e-04  124s
+ep  26  train 68.30  val 68.52  r2 0.3918  lr 4.8e-04  130s
+ep  27  train 68.26  val 68.51  r2 0.3920  lr 2.4e-04  135s
+ep  28  train 68.27  val 68.51  r2 0.3919  lr 2.4e-04  140s
+ep  29  train 68.26  val 68.50  r2 0.3921  lr 2.4e-04  146s
+ep  30  train 68.26  val 68.51  r2 0.3920  lr 2.4e-04  150s
+ep  31  train 68.23  val 68.50  r2 0.3922  lr 1.2e-04  155s
+ep  32  train 68.23  val 68.50  r2 0.3922  lr 1.2e-04  159s
+ep  33  train 68.25  val 68.50  r2 0.3922  lr 1.2e-04  163s
+ep  34  train 68.23  val 68.49  r2 0.3923  lr 1.2e-04  166s
+ep  35  train 68.22  val 68.49  r2 0.3924  lr 1.2e-04  170s
+ep  36  train 68.23  val 68.49  r2 0.3924  lr 1.2e-04  173s
+ep  37  train 68.22  val 68.49  r2 0.3924  lr 1.2e-04  176s
+ep  38  train 68.21  val 68.48  r2 0.3925  lr 6.0e-05  179s
+ep  39  train 68.21  val 68.48  r2 0.3925  lr 6.0e-05  181s
+ep  40  train 68.21  val 68.48  r2 0.3925  lr 6.0e-05  184s
+== B_compacta seed 1: val 68.48  test22 68.52  test23 73.04  (184s)
+ep   1  train 69.56  val 69.52  r2 0.3739  lr 1.9e-03  3s
+ep   2  train 69.14  val 69.17  r2 0.3801  lr 1.9e-03  7s
+ep   3  train 68.99  val 69.04  r2 0.3825  lr 1.9e-03  11s
+ep   4  train 68.84  val 68.88  r2 0.3854  lr 1.9e-03  13s
+ep   5  train 68.83  val 68.88  r2 0.3853  lr 1.9e-03  16s
+ep   6  train 68.84  val 68.92  r2 0.3847  lr 1.9e-03  19s
+ep   7  train 68.72  val 68.81  r2 0.3867  lr 1.9e-03  22s
+ep   8  train 68.72  val 68.86  r2 0.3857  lr 1.9e-03  24s
+ep   9  train 68.70  val 68.82  r2 0.3865  lr 1.9e-03  28s
+ep  10  train 68.63  val 68.77  r2 0.3873  lr 1.9e-03  30s
+ep  11  train 68.59  val 68.74  r2 0.3878  lr 1.9e-03  33s
+ep  12  train 68.62  val 68.76  r2 0.3875  lr 1.9e-03  36s
+ep  13  train 68.58  val 68.76  r2 0.3875  lr 1.9e-03  39s
+ep  14  train 68.53  val 68.73  r2 0.3881  lr 1.9e-03  41s
+ep  15  train 68.53  val 68.72  r2 0.3882  lr 1.9e-03  44s
+ep  16  train 68.45  val 68.66  r2 0.3893  lr 1.9e-03  47s
+ep  17  train 68.48  val 68.73  r2 0.3881  lr 1.9e-03  49s
+ep  18  train 68.46  val 68.73  r2 0.3880  lr 1.9e-03  52s
+ep  19  train 68.46  val 68.72  r2 0.3883  lr 1.9e-03  55s
+ep  20  train 68.29  val 68.59  r2 0.3906  lr 9.6e-04  58s
+ep  21  train 68.28  val 68.57  r2 0.3909  lr 9.6e-04  61s
+ep  22  train 68.31  val 68.61  r2 0.3901  lr 9.6e-04  64s
+ep  23  train 68.29  val 68.61  r2 0.3902  lr 9.6e-04  67s
+ep  24  train 68.29  val 68.58  r2 0.3907  lr 9.6e-04  69s
+ep  25  train 68.23  val 68.56  r2 0.3910  lr 4.8e-04  72s
+ep  26  train 68.19  val 68.52  r2 0.3917  lr 4.8e-04  75s
+ep  27  train 68.22  val 68.56  r2 0.3911  lr 4.8e-04  78s
+ep  28  train 68.20  val 68.55  r2 0.3913  lr 4.8e-04  81s
+ep  29  train 68.17  val 68.52  r2 0.3918  lr 4.8e-04  85s
+ep  30  train 68.17  val 68.52  r2 0.3919  lr 2.4e-04  88s
+ep  31  train 68.12  val 68.50  r2 0.3922  lr 2.4e-04  91s
+ep  32  train 68.12  val 68.49  r2 0.3923  lr 2.4e-04  94s
+ep  33  train 68.13  val 68.51  r2 0.3920  lr 2.4e-04  97s
+ep  34  train 68.14  val 68.51  r2 0.3920  lr 2.4e-04  100s
+ep  35  train 68.12  val 68.51  r2 0.3920  lr 2.4e-04  103s
+ep  36  train 68.12  val 68.50  r2 0.3921  lr 1.2e-04  106s
+ep  37  train 68.09  val 68.48  r2 0.3924  lr 1.2e-04  109s
+ep  38  train 68.09  val 68.49  r2 0.3924  lr 1.2e-04  111s
+ep  39  train 68.09  val 68.49  r2 0.3924  lr 6.0e-05  115s
+ep  40  train 68.09  val 68.48  r2 0.3924  lr 6.0e-05  119s
+== B_compacta seed 2: val 68.48  test22 68.53  test23 73.05  (119s)
+ep   1  train 69.46  val 69.44  r2 0.3753  lr 6.8e-04  24s
+ep   2  train 69.06  val 69.13  r2 0.3810  lr 6.8e-04  42s
+ep   3  train 69.02  val 69.14  r2 0.3808  lr 6.8e-04  56s
+ep   4  train 68.71  val 68.85  r2 0.3858  lr 6.8e-04  68s
+ep   5  train 68.74  val 68.90  r2 0.3851  lr 6.8e-04  80s
+ep   6  train 68.69  val 68.94  r2 0.3843  lr 6.8e-04  92s
+ep   7  train 68.64  val 68.84  r2 0.3861  lr 6.8e-04  104s
+ep   8  train 68.50  val 68.82  r2 0.3865  lr 6.8e-04  115s
+ep   9  train 68.43  val 68.74  r2 0.3879  lr 6.8e-04  127s
+ep  10  train 68.41  val 68.70  r2 0.3885  lr 6.8e-04  138s
+ep  11  train 68.30  val 68.66  r2 0.3893  lr 6.8e-04  149s
+ep  12  train 68.25  val 68.62  r2 0.3900  lr 6.8e-04  161s
+ep  13  train 68.24  val 68.65  r2 0.3894  lr 6.8e-04  172s
+ep  14  train 68.31  val 68.70  r2 0.3885  lr 6.8e-04  187s
+ep  15  train 68.20  val 68.67  r2 0.3891  lr 6.8e-04  199s
+ep  16  train 67.96  val 68.53  r2 0.3916  lr 3.4e-04  210s
+ep  17  train 67.86  val 68.48  r2 0.3925  lr 3.4e-04  222s
+ep  18  train 67.86  val 68.51  r2 0.3919  lr 3.4e-04  233s
+ep  19  train 67.80  val 68.50  r2 0.3922  lr 3.4e-04  244s
+ep  20  train 67.85  val 68.59  r2 0.3906  lr 3.4e-04  255s
+ep  21  train 67.63  val 68.49  r2 0.3922  lr 1.7e-04  266s
+ep  22  train 67.55  val 68.47  r2 0.3926  lr 1.7e-04  277s
+ep  23  train 67.55  val 68.49  r2 0.3923  lr 1.7e-04  288s
+ep  24  train 67.48  val 68.50  r2 0.3921  lr 8.5e-05  299s
+ep  25  train 67.44  val 68.48  r2 0.3924  lr 8.5e-05  309s
+ep  26  train 67.40  val 68.49  r2 0.3923  lr 8.5e-05  320s
+ep  27  train 67.35  val 68.48  r2 0.3925  lr 4.3e-05  332s
+== C_contraste seed 0: val 68.47  test22 68.54  test23 73.05  (332s)
+ep   1  train 69.83  val 69.88  r2 0.3675  lr 6.8e-04  13s
+ep   2  train 69.16  val 69.13  r2 0.3810  lr 6.8e-04  26s
+ep   3  train 68.97  val 69.07  r2 0.3819  lr 6.8e-04  38s
+ep   4  train 68.79  val 68.89  r2 0.3852  lr 6.8e-04  50s
+ep   5  train 68.83  val 68.98  r2 0.3835  lr 6.8e-04  61s
+ep   6  train 68.64  val 68.77  r2 0.3873  lr 6.8e-04  73s
+ep   7  train 68.55  val 68.76  r2 0.3876  lr 6.8e-04  84s
+ep   8  train 68.48  val 68.68  r2 0.3889  lr 6.8e-04  97s
+ep   9  train 68.42  val 68.65  r2 0.3894  lr 6.8e-04  113s
+ep  10  train 68.40  val 68.65  r2 0.3895  lr 6.8e-04  133s
+ep  11  train 68.34  val 68.64  r2 0.3897  lr 6.8e-04  150s
+ep  12  train 68.40  val 68.76  r2 0.3876  lr 6.8e-04  165s
+ep  13  train 68.38  val 68.73  r2 0.3880  lr 6.8e-04  181s
+ep  14  train 68.28  val 68.65  r2 0.3895  lr 6.8e-04  192s
+ep  15  train 68.11  val 68.58  r2 0.3908  lr 3.4e-04  205s
+ep  16  train 68.08  val 68.59  r2 0.3905  lr 3.4e-04  217s
+ep  17  train 67.94  val 68.51  r2 0.3919  lr 3.4e-04  228s
+ep  18  train 67.90  val 68.52  r2 0.3918  lr 3.4e-04  240s
+ep  19  train 67.94  val 68.56  r2 0.3911  lr 3.4e-04  251s
+ep  20  train 67.82  val 68.53  r2 0.3917  lr 3.4e-04  262s
+ep  21  train 67.66  val 68.48  r2 0.3924  lr 1.7e-04  274s
+ep  22  train 67.65  val 68.49  r2 0.3922  lr 1.7e-04  285s
+ep  23  train 67.60  val 68.50  r2 0.3921  lr 1.7e-04  297s
+ep  24  train 67.58  val 68.53  r2 0.3916  lr 1.7e-04  310s
+ep  25  train 67.51  val 68.50  r2 0.3921  lr 8.5e-05  322s
+ep  26  train 67.47  val 68.49  r2 0.3923  lr 8.5e-05  333s
+== C_contraste seed 1: val 68.48  test22 68.54  test23 72.98  (333s)
+ep   1  train 69.47  val 69.49  r2 0.3744  lr 6.8e-04  12s
+ep   2  train 69.08  val 69.16  r2 0.3803  lr 6.8e-04  23s
+ep   3  train 68.86  val 68.97  r2 0.3837  lr 6.8e-04  35s
+ep   4  train 68.68  val 68.82  r2 0.3865  lr 6.8e-04  46s
+ep   5  train 68.56  val 68.74  r2 0.3878  lr 6.8e-04  58s
+ep   6  train 68.59  val 68.79  r2 0.3870  lr 6.8e-04  69s
+ep   7  train 68.45  val 68.71  r2 0.3885  lr 6.8e-04  80s
+ep   8  train 68.40  val 68.71  r2 0.3885  lr 6.8e-04  91s
+ep   9  train 68.31  val 68.63  r2 0.3899  lr 6.8e-04  102s
+ep  10  train 68.36  val 68.70  r2 0.3885  lr 6.8e-04  113s
+ep  11  train 68.35  val 68.72  r2 0.3882  lr 6.8e-04  124s
+ep  12  train 68.20  val 68.58  r2 0.3908  lr 6.8e-04  135s
+ep  13  train 68.16  val 68.59  r2 0.3905  lr 6.8e-04  146s
+ep  14  train 68.17  val 68.62  r2 0.3899  lr 6.8e-04  157s
+ep  15  train 68.14  val 68.61  r2 0.3901  lr 6.8e-04  168s
+ep  16  train 67.91  val 68.51  r2 0.3919  lr 3.4e-04  179s
+ep  17  train 67.86  val 68.51  r2 0.3920  lr 3.4e-04  190s
+ep  18  train 67.82  val 68.50  r2 0.3922  lr 3.4e-04  201s
+ep  19  train 67.79  val 68.51  r2 0.3920  lr 3.4e-04  212s
+ep  20  train 67.75  val 68.52  r2 0.3917  lr 3.4e-04  225s
+ep  21  train 67.69  val 68.50  r2 0.3921  lr 3.4e-04  238s
+ep  22  train 67.63  val 68.49  r2 0.3924  lr 1.7e-04  250s
+ep  23  train 67.52  val 68.47  r2 0.3927  lr 1.7e-04  261s
+ep  24  train 67.53  val 68.48  r2 0.3926  lr 1.7e-04  272s
+ep  25  train 67.50  val 68.49  r2 0.3924  lr 1.7e-04  283s
+ep  26  train 67.43  val 68.47  r2 0.3927  lr 1.7e-04  297s
+ep  27  train 67.37  val 68.47  r2 0.3926  lr 8.5e-05  312s
+ep  28  train 67.35  val 68.48  r2 0.3926  lr 8.5e-05  327s
+ep  29  train 67.29  val 68.47  r2 0.3927  lr 8.5e-05  339s
+ep  30  train 67.28  val 68.47  r2 0.3926  lr 4.3e-05  350s
+ep  31  train 67.25  val 68.47  r2 0.3927  lr 4.3e-05  362s
+== C_contraste seed 2: val 68.47  test22 68.56  test23 73.05  (362s)

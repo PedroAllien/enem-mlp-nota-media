@@ -433,7 +433,7 @@ for i, esc in enumerate(ESCALAS):
     ax.scatter(t["val_restaurado"], y + (i - 0.5) * 0.25, s=40, color=SERIES[i], label=ESCALAS[esc], edgecolor=plots.SURFACE, linewidth=1.5, zorder=3)
 ax.set_yticks(y, [ROT_REG[v] for v in ordem]); ax.invert_yaxis()
 ax.set_xlabel("RMSE de validação do modelo devolvido (pontos)"); ax.legend(loc="lower right")
-ax.set_title("Com 500 mil exemplos, L1/L2 fortes, dropout 0,5 e early stopping seguram o overfitting;\ncom 20 mil, só o early stopping")
+ax.set_title("Com 500 mil exemplos, L1/L2 fortes, dropout 0,5 e early stopping seguram o overfitting;\\ncom 20 mil, só o early stopping")
 plots.save(fig, "reg_resumo")
 """),
     md("### 2.1 Diagnóstico: por que L1/L2 não seguraram o overfitting com 20 mil exemplos?\n\n"
@@ -474,7 +474,7 @@ ultimo = {t.number: list(t.intermediate_values.values())[-1] for t in study.tria
 ax.scatter(list(ultimo), list(ultimo.values()), s=30, color=MUTED, label="podado (último valor)", zorder=2)
 melhor = tr.loc[okm].set_index("number")["value"].cummin()
 ax.step(melhor.index, melhor.values, where="post", color=SERIES[1], label="melhor até aqui")
-ax.set_ylim(top=tr.loc[okm, "value"].quantile(0.95) + 0.5)
+ax.set_ylim(tr.loc[okm, "value"].min() - 0.15, tr.loc[okm, "value"].quantile(0.95) + 0.5)
 ax.set_xlabel("Trial"); ax.set_ylabel("RMSE de validação (pontos)"); ax.legend()
 ax.set_title("Histórico da otimização"); plots.save(fig, "optuna_historico")
 """),
@@ -490,13 +490,15 @@ imp.sort_values(ascending=False).round(3)
 """),
     code("""
 num = [("params_n_camadas", "Camadas ocultas", False), ("params_largura", "Largura (1ª camada)", True), ("params_lr", "Taxa de aprendizado", True),
-       ("params_dropout", "Dropout", False), ("params_l2", "Penalidade L2", True), ("params_batch_size", "Tamanho do lote", True),
+       ("params_dropout", "Dropout", False), ("params_l2", "Penalidade L2", True), ("params_batch_size", "Tamanho do lote", False),
        ("params_emb_municipio", "Dimensão do embedding do município", False), ("params_normalizacao", "Normalização", False)]
 c = tr[okm]
 fig, axes = plt.subplots(2, 4, figsize=(13, 5.6), sharey=True)
 for ax, (col, rot, logx) in zip(axes.flat, num):
-    x = c[col]
-    if x.dtype == object:
+    x = c[col].astype(str) if col == "params_batch_size" else c[col]
+    if col == "params_batch_size":
+        cats = ["512", "1024", "2048", "4096"]; x = x.map({k: i for i, k in enumerate(cats)}); ax.set_xticks(range(len(cats)), cats)
+    elif x.dtype == object:
         cats = sorted(x.unique()); x = x.map({k: i for i, k in enumerate(cats)}); ax.set_xticks(range(len(cats)), cats)
     ax.scatter(x, c["value"], s=24, color=SERIES[0], alpha=0.8, edgecolor=plots.SURFACE, linewidth=1)
     if logx: ax.set_xscale("log")
@@ -555,7 +557,7 @@ fin = {r["name"]: r for r in load_results("finais")}
 nomes_m = ["linear", "A_melhor", "B_compacta", "C_contraste"]
 fig, axes = plt.subplots(1, 4, figsize=(13, 3.4), sharey=True)
 for ax, m in zip(axes, nomes_m):
-    curvas(ax, fin[f"{m}_seed0"], f"{m} ({fin[f'{m}_seed0']['n_params']:,} parâm.)")
+    curvas(ax, fin[f"{m}_seed0"], f"{m} ({fin[f'{m}_seed0']['n_params']:,} parâm.)".replace(",", "."))
     ax.set_xlabel("Época")
 axes[0].set_ylabel("RMSE (pontos)"); axes[0].legend()
 lo = min(min(h["train_rmse"] for h in fin[f"{m}_seed0"]["history"]) for m in nomes_m)
@@ -569,7 +571,9 @@ t23 = agg[(agg["split"] == "test23") & (agg["modelo"] != "media_treino")].set_in
 for ax, (col, rot) in zip(axes, [("n_params", "Parâmetros treináveis"), ("treino_s", "Tempo de treino (s, média de 3 sementes)")]):
     for i, (m, r) in enumerate(t23.iterrows()):
         ax.errorbar(r[col], r["rmse"], yerr=r["rmse_dp"], fmt="o", color=SERIES[i], markersize=7, label=m, capsize=0)
-    ax.set_xscale("log"); ax.set_xlabel(rot)
+    ax.set_xscale("log"); ax.set_xlabel(rot); ax.minorticks_off()
+    ticks = [3e4, 1e5, 3e5, 1e6] if col == "n_params" else [10, 30, 100, 300, 1000]
+    ax.set_xticks(ticks, [f"{t/1000:.0f} mil" if col == "n_params" and t < 1e6 else ("1 mi" if col == "n_params" else f"{t:.0f}") for t in ticks])
 axes[0].set_ylabel("RMSE teste-2023 (pontos)"); axes[0].legend()
 fig.suptitle("Custo × efetividade no teste 2023", x=0.01, ha="left", fontsize=11, fontweight="bold")
 fig.tight_layout(); plots.save(fig, "final_custo_efetividade")
@@ -586,6 +590,11 @@ meta["erro"] = meta["pred"] - meta[C.TARGET]
 print(f"RMSE {np.sqrt((meta['erro']**2).mean()):.2f} | MAE {meta['erro'].abs().mean():.2f} | viés {meta['erro'].mean():.2f}")
 print(f"faixa das predições: {meta['pred'].min():.0f}–{meta['pred'].max():.0f} (real: {meta[C.TARGET].min():.0f}–{meta[C.TARGET].max():.0f})")
 print(f"desvio das predições {meta['pred'].std():.1f} vs desvio real {meta[C.TARGET].std():.1f}")
+resumo_erro = {"modelo": melhor, "rmse": float(np.sqrt((meta['erro']**2).mean())), "mae": float(meta['erro'].abs().mean()),
+               "vies": float(meta['erro'].mean()), "std_pred": float(meta['pred'].std()), "std_real": float(meta[C.TARGET].std()),
+               "pred_min": float(meta['pred'].min()), "pred_max": float(meta['pred'].max()),
+               "frac_erro_abs_lt_50": float((meta['erro'].abs() < 50).mean()), "frac_erro_abs_gt_100": float((meta['erro'].abs() > 100).mean())}
+_ = (C.TAB_DIR / "analise_erros.json").write_text(json.dumps(resumo_erro, indent=1))
 """),
     code("""
 fig, ax = plt.subplots(figsize=(6.4, 5.4))
@@ -606,7 +615,7 @@ ax.plot(x, dec["nota_real"], marker="o", color=SERIES[0], label="real (média do
 ax.plot(x, dec["prevista"], marker="o", color=SERIES[1], label="prevista (média)")
 ax.set_xticks(x, dec.index); ax.set_xlabel("Decil da nota real"); ax.set_ylabel("Nota média (pontos)"); ax.legend()
 ax.set_title("Regressão à média: superestima quem vai mal e subestima quem vai bem"); plots.save(fig, "erro_decis")
-dec.round(1)
+dec.to_csv(C.TAB_DIR / "erro_decis.csv"); dec.round(1)
 """),
     code("""
 def por_grupo(col, mapa=None):
@@ -626,7 +635,7 @@ gtab = pd.concat(grupos, names=["grupo", "categoria"])
 gtab.to_csv(C.TAB_DIR / "erro_por_grupo.csv"); gtab.round(1)
 """),
     code("""
-uf = por_grupo("SG_UF_PROVA").sort_values("vies")
+uf = por_grupo("SG_UF_PROVA").sort_values("vies"); uf.to_csv(C.TAB_DIR / "erro_uf.csv")
 fig, ax = plt.subplots(figsize=(11, 3.4))
 cores = [SERIES[0] if v >= 0 else SERIES[1] for v in uf["vies"]]
 ax.bar(uf.index, uf["vies"], width=0.6, color=cores)
@@ -634,7 +643,7 @@ ax.axhline(0, color=MUTED, linewidth=1); ax.set_ylabel("Viés médio (previsto �
 ax.set_title("Viés por UF em 2023 (azul = superestima, laranja = subestima)"); plots.save(fig, "erro_uf")
 """),
     code("""
-renda = por_grupo("Q006")
+renda = por_grupo("Q006"); renda.to_csv(C.TAB_DIR / "erro_renda.csv")
 fig, ax = plt.subplots(figsize=(8, 3.4))
 ax.plot(range(len(renda)), renda["rmse"], marker="o", color=SERIES[0], label="RMSE")
 ax.plot(range(len(renda)), renda["vies"], marker="o", color=SERIES[1], label="viés")

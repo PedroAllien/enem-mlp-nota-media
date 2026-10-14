@@ -1,0 +1,16 @@
+grupo,categoria,n,real,vies,rmse
+Tipo de escola,não respondeu,1614715,544.9118,-0.9930698,72.56441
+Tipo de escola,pública,823248,517.627,-2.990027,73.50687
+Tipo de escola,privada,220800,616.7309,-9.835954,73.1885
+Sexo (não usado no modelo),feminino,1632353,539.7221,-2.9542978,70.15413
+Sexo (não usado no modelo),masculino,1026410,546.73065,-1.3779874,77.08855
+Cor/raça (não usada no modelo),não declarado,32946,541.46686,-3.4627388,76.980354
+Cor/raça (não usada no modelo),branca,1146256,570.5703,-9.658966,73.38914
+Cor/raça (não usada no modelo),preta,314240,514.2494,7.090352,70.89788
+Cor/raça (não usada no modelo),parda,1108782,522.291,2.2023287,72.8504
+Cor/raça (não usada no modelo),amarela,42333,538.22406,-0.060752735,73.06236
+Cor/raça (não usada no modelo),indígena,14206,481.40408,19.814936,72.38508
+Treineiro,não,2152164,542.2435,-2.0638404,72.96588
+Treineiro,sim,506599,543.2106,-3.5434613,72.668686
+Redação,nota 0,89573,358.30682,143.44196,151.17976
+Redação,nota > 0,2569190,548.84705,-7.428553,68.58768

@@ -1,0 +1,63 @@
+{
+ "A_melhor": {
+  "trial": 33,
+  "val_rmse_optuna": 68.8442153930664,
+  "params": {
+   "n_camadas": 2,
+   "largura": 658,
+   "formato": "constante",
+   "ativacao": "silu",
+   "dropout": 0.45938362740327915,
+   "normalizacao": "layer",
+   "l2": 5.07346168617052e-06,
+   "lr": 0.00045434011974226056,
+   "batch_size": 1024,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   658,
+   658
+  ]
+ },
+ "B_compacta": {
+  "trial": 46,
+  "val_rmse_optuna": 68.95785522460938,
+  "params": {
+   "n_camadas": 1,
+   "largura": 173,
+   "formato": "constante",
+   "ativacao": "silu",
+   "dropout": 0.4102315974580079,
+   "normalizacao": "layer",
+   "l2": 4.801366751657585e-06,
+   "lr": 0.001920983617698153,
+   "batch_size": 1024,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   173
+  ]
+ },
+ "C_contraste": {
+  "trial": 16,
+  "val_rmse_optuna": 69.01148223876953,
+  "params": {
+   "n_camadas": 4,
+   "largura": 380,
+   "formato": "funil",
+   "ativacao": "relu",
+   "dropout": 0.2749460065690797,
+   "normalizacao": "layer",
+   "l2": 6.382254211142932e-06,
+   "lr": 0.000683589697991556,
+   "batch_size": 512,
+   "emb_municipio": 16
+  },
+  "hidden": [
+   380,
+   190,
+   95,
+   47
+  ]
+ }
+}

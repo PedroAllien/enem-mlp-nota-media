@@ -8,3 +8,4 @@ data/
 # predições completas (~50 MB); regeneradas por scripts/05_modelos_finais.py
 outputs/predicoes_*.parquet
 ~$*.docx
+relatorio/gerador/node_modules/

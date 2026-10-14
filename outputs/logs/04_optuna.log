@@ -1,0 +1,74 @@
+[I 2026-10-14 09:07:49,567] A new study created in RDB with name: enem_mlp
+[I 2026-10-14 09:07:59,359] Trial 0 finished with value: 69.17623901367188 and parameters: {'n_camadas': 3, 'largura': 256, 'formato': 'constante', 'ativacao': 'relu', 'dropout': 0.1, 'normalizacao': 'none', 'l2': 1e-06, 'lr': 0.001, 'batch_size': 2048, 'emb_municipio': 16}. Best is trial 0 with value: 69.17623901367188.
+[I 2026-10-14 09:10:41,403] Trial 1 finished with value: 69.2363510131836 and parameters: {'n_camadas': 3, 'largura': 863, 'formato': 'constante', 'ativacao': 'relu', 'dropout': 0.4330880728874676, 'normalizacao': 'batch', 'l2': 0.007579479953348004, 'lr': 0.0016967533607196547, 'batch_size': 4096, 'emb_municipio': 16}. Best is trial 0 with value: 69.17623901367188.
+[I 2026-10-14 09:11:09,694] Trial 2 finished with value: 70.08943176269531 and parameters: {'n_camadas': 2, 'largura': 113, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.023225206359998862, 'normalizacao': 'none', 'l2': 0.006245139574743071, 'lr': 0.0026690431824362526, 'batch_size': 512, 'emb_municipio': 32}. Best is trial 0 with value: 69.17623901367188.
+[I 2026-10-14 09:11:24,437] Trial 3 finished with value: 70.80891418457031 and parameters: {'n_camadas': 2, 'largura': 316, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.3875664116805573, 'normalizacao': 'none', 'l2': 0.004869640941520904, 'lr': 0.00013511829476450826, 'batch_size': 4096, 'emb_municipio': 4}. Best is trial 0 with value: 69.17623901367188.
+[I 2026-10-14 09:11:52,669] Trial 4 finished with value: 68.99976348876953 and parameters: {'n_camadas': 1, 'largura': 515, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.4077307142274171, 'normalizacao': 'layer', 'l2': 1.9777828512462715e-06, 'lr': 0.00033845220412011414, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:12:14,908] Trial 5 finished with value: 69.80964660644531 and parameters: {'n_camadas': 6, 'largura': 163, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.24689779818219537, 'normalizacao': 'none', 'l2': 2.7012557725439094e-06, 'lr': 0.00011128194768838959, 'batch_size': 4096, 'emb_municipio': 8}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:12:24,108] Trial 6 finished with value: 70.23201751708984 and parameters: {'n_camadas': 2, 'largura': 55, 'formato': 'constante', 'ativacao': 'gelu', 'dropout': 0.09328502944301792, 'normalizacao': 'none', 'l2': 0.003840300419098858, 'lr': 0.00029493729440953863, 'batch_size': 4096, 'emb_municipio': 0}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:12:37,078] Trial 7 finished with value: 69.45555877685547 and parameters: {'n_camadas': 1, 'largura': 102, 'formato': 'constante', 'ativacao': 'gelu', 'dropout': 0.48589104136048034, 'normalizacao': 'none', 'l2': 1.597766235483387e-05, 'lr': 0.0002634777514406047, 'batch_size': 1024, 'emb_municipio': 4}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:12:39,096] Trial 8 pruned. 
+[I 2026-10-14 09:13:09,907] Trial 9 finished with value: 69.10836791992188 and parameters: {'n_camadas': 5, 'largura': 121, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.4386696766904905, 'normalizacao': 'layer', 'l2': 0.00016626592254031893, 'lr': 0.0006058402553512056, 'batch_size': 4096, 'emb_municipio': 32}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:14:11,375] Trial 10 finished with value: 69.91055297851562 and parameters: {'n_camadas': 6, 'largura': 476, 'formato': 'constante', 'ativacao': 'gelu', 'dropout': 0.004598525808314824, 'normalizacao': 'batch', 'l2': 4.3977668944839625e-06, 'lr': 0.0006464669746492397, 'batch_size': 4096, 'emb_municipio': 32}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:14:47,658] Trial 11 finished with value: 69.19021606445312 and parameters: {'n_camadas': 4, 'largura': 228, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.1965488623333802, 'normalizacao': 'none', 'l2': 0.00010245858939867325, 'lr': 0.0007114706514580523, 'batch_size': 2048, 'emb_municipio': 32}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:15:10,613] Trial 12 finished with value: 69.00508117675781 and parameters: {'n_camadas': 1, 'largura': 504, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.32235795551864715, 'normalizacao': 'layer', 'l2': 1.7418392167193583e-06, 'lr': 0.0004908611108451403, 'batch_size': 2048, 'emb_municipio': 16}. Best is trial 4 with value: 68.99976348876953.
+[I 2026-10-14 09:15:44,940] Trial 13 finished with value: 68.89405059814453 and parameters: {'n_camadas': 2, 'largura': 526, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.38938631664352413, 'normalizacao': 'layer', 'l2': 3.3360073956743845e-05, 'lr': 0.0010264294473245254, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:17:00,354] Trial 14 finished with value: 68.94251251220703 and parameters: {'n_camadas': 2, 'largura': 703, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.4123997742152113, 'normalizacao': 'layer', 'l2': 5.942903021696457e-05, 'lr': 0.0008695556094871149, 'batch_size': 512, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:17:21,718] Trial 15 finished with value: 68.97130584716797 and parameters: {'n_camadas': 1, 'largura': 480, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.4755680393374312, 'normalizacao': 'layer', 'l2': 0.00011333381978749885, 'lr': 0.0007927092212444167, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:18:01,903] Trial 16 finished with value: 69.01148223876953 and parameters: {'n_camadas': 4, 'largura': 380, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.2749460065690797, 'normalizacao': 'layer', 'l2': 6.382254211142932e-06, 'lr': 0.000683589697991556, 'batch_size': 512, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:18:28,603] Trial 17 finished with value: 68.95231628417969 and parameters: {'n_camadas': 1, 'largura': 694, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.44236841091081225, 'normalizacao': 'layer', 'l2': 2.0620279099622437e-05, 'lr': 0.0017502927032366515, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:18:39,888] Trial 18 pruned. 
+[I 2026-10-14 09:19:25,567] Trial 19 finished with value: 68.92588806152344 and parameters: {'n_camadas': 3, 'largura': 625, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.44054634809151066, 'normalizacao': 'layer', 'l2': 9.159298661134643e-05, 'lr': 0.0014172556245381468, 'batch_size': 4096, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:19:51,015] Trial 20 finished with value: 69.00775909423828 and parameters: {'n_camadas': 3, 'largura': 496, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.4824761316828168, 'normalizacao': 'none', 'l2': 3.5167393387975805e-06, 'lr': 0.0012997424906570582, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 13 with value: 68.89405059814453.
+[I 2026-10-14 09:20:30,688] Trial 21 finished with value: 68.86341857910156 and parameters: {'n_camadas': 3, 'largura': 420, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.44829518000893004, 'normalizacao': 'layer', 'l2': 3.56445445348207e-05, 'lr': 0.000663366585996241, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 21 with value: 68.86341857910156.
+[I 2026-10-14 09:20:33,919] Trial 22 pruned. 
+[I 2026-10-14 09:20:40,929] Trial 23 pruned. 
+[I 2026-10-14 09:20:47,701] Trial 24 pruned. 
+[I 2026-10-14 09:20:52,535] Trial 25 pruned. 
+[I 2026-10-14 09:21:08,897] Trial 26 pruned. 
+[I 2026-10-14 09:21:17,202] Trial 27 pruned. 
+[I 2026-10-14 09:21:41,769] Trial 28 finished with value: 68.89036560058594 and parameters: {'n_camadas': 2, 'largura': 382, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.3814013861872714, 'normalizacao': 'layer', 'l2': 1.1385132860660848e-05, 'lr': 0.0009708526060122618, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 21 with value: 68.86341857910156.
+[I 2026-10-14 09:21:52,862] Trial 29 pruned. 
+[I 2026-10-14 09:22:20,806] Trial 30 finished with value: 68.91022491455078 and parameters: {'n_camadas': 2, 'largura': 442, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.3322366929259082, 'normalizacao': 'layer', 'l2': 1.7257313620958316e-05, 'lr': 0.0014363459345041799, 'batch_size': 1024, 'emb_municipio': 4}. Best is trial 21 with value: 68.86341857910156.
+[I 2026-10-14 09:22:38,248] Trial 31 finished with value: 68.91751861572266 and parameters: {'n_camadas': 2, 'largura': 234, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.41084642522823733, 'normalizacao': 'layer', 'l2': 2.352169542687207e-05, 'lr': 0.001057804257601653, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 21 with value: 68.86341857910156.
+[I 2026-10-14 09:23:04,221] Trial 32 finished with value: 68.91637420654297 and parameters: {'n_camadas': 2, 'largura': 349, 'formato': 'funil', 'ativacao': 'relu', 'dropout': 0.31334040025264626, 'normalizacao': 'layer', 'l2': 1.9783722662050156e-05, 'lr': 0.0014920019347283086, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 21 with value: 68.86341857910156.
+[I 2026-10-14 09:24:07,010] Trial 33 finished with value: 68.8442153930664 and parameters: {'n_camadas': 2, 'largura': 658, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.45938362740327915, 'normalizacao': 'layer', 'l2': 5.07346168617052e-06, 'lr': 0.00045434011974226056, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:24:56,596] Trial 34 finished with value: 68.94562530517578 and parameters: {'n_camadas': 3, 'largura': 891, 'formato': 'funil', 'ativacao': 'silu', 'dropout': 0.3972524395527688, 'normalizacao': 'layer', 'l2': 1.8399211523116582e-06, 'lr': 0.00032200443538645386, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:25:10,875] Trial 35 pruned. 
+[I 2026-10-14 09:25:33,264] Trial 36 pruned. 
+[I 2026-10-14 09:25:40,344] Trial 37 pruned. 
+[I 2026-10-14 09:26:32,180] Trial 38 finished with value: 68.88111114501953 and parameters: {'n_camadas': 3, 'largura': 475, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.3741363691341113, 'normalizacao': 'layer', 'l2': 1.4569988148540385e-05, 'lr': 0.0011874009170983616, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:26:43,539] Trial 39 pruned. 
+[I 2026-10-14 09:26:58,710] Trial 40 finished with value: 68.85647583007812 and parameters: {'n_camadas': 1, 'largura': 234, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.4417377535788457, 'normalizacao': 'layer', 'l2': 3.0641808918061717e-06, 'lr': 0.0017099356366105376, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:27:02,253] Trial 41 pruned. 
+[I 2026-10-14 09:27:47,963] Trial 42 finished with value: 68.88655853271484 and parameters: {'n_camadas': 3, 'largura': 348, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.3896078948153962, 'normalizacao': 'layer', 'l2': 4.860298461099951e-05, 'lr': 0.0009355900820540705, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:27:57,472] Trial 43 pruned. 
+[I 2026-10-14 09:28:02,703] Trial 44 pruned. 
+[I 2026-10-14 09:28:07,256] Trial 45 pruned. 
+[I 2026-10-14 09:28:16,661] Trial 46 finished with value: 68.95785522460938 and parameters: {'n_camadas': 1, 'largura': 173, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.4102315974580079, 'normalizacao': 'layer', 'l2': 4.801366751657585e-06, 'lr': 0.001920983617698153, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:28:22,386] Trial 47 pruned. 
+[I 2026-10-14 09:28:31,294] Trial 48 pruned. 
+[I 2026-10-14 09:28:42,220] Trial 49 finished with value: 68.90962219238281 and parameters: {'n_camadas': 1, 'largura': 327, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.3866355759141768, 'normalizacao': 'layer', 'l2': 2.426424325005356e-06, 'lr': 0.001536440799590543, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:30:10,815] Trial 50 pruned. 
+[I 2026-10-14 09:30:18,436] Trial 51 pruned. 
+[I 2026-10-14 09:30:44,889] Trial 52 finished with value: 68.85659790039062 and parameters: {'n_camadas': 2, 'largura': 296, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.4947249101013488, 'normalizacao': 'layer', 'l2': 1.9844189805432304e-06, 'lr': 0.0011947244477023237, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:30:55,044] Trial 53 pruned. 
+[I 2026-10-14 09:31:11,388] Trial 54 finished with value: 68.87171173095703 and parameters: {'n_camadas': 2, 'largura': 282, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.4404742088657898, 'normalizacao': 'layer', 'l2': 3.442172825685932e-06, 'lr': 0.0013215097735861788, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:31:15,650] Trial 55 pruned. 
+[I 2026-10-14 09:31:19,437] Trial 56 pruned. 
+[I 2026-10-14 09:32:10,940] Trial 57 finished with value: 68.95450592041016 and parameters: {'n_camadas': 3, 'largura': 531, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.37882596398390755, 'normalizacao': 'layer', 'l2': 1.2342240146424622e-05, 'lr': 0.0019396502375907453, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:32:25,558] Trial 58 finished with value: 68.84835815429688 and parameters: {'n_camadas': 1, 'largura': 296, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.33808381174494173, 'normalizacao': 'layer', 'l2': 2.0024471047829395e-06, 'lr': 0.0009935008600164233, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+[I 2026-10-14 09:32:39,971] Trial 59 finished with value: 68.86883544921875 and parameters: {'n_camadas': 1, 'largura': 227, 'formato': 'constante', 'ativacao': 'silu', 'dropout': 0.37471814773566187, 'normalizacao': 'layer', 'l2': 1.6095581829707378e-06, 'lr': 0.0012655776559007232, 'batch_size': 1024, 'emb_municipio': 16}. Best is trial 33 with value: 68.8442153930664.
+melhor trial: 33 68.8442153930664
+{
+ "n_camadas": 2,
+ "largura": 658,
+ "formato": "constante",
+ "ativacao": "silu",
+ "dropout": 0.45938362740327915,
+ "normalizacao": "layer",
+ "l2": 5.07346168617052e-06,
+ "lr": 0.00045434011974226056,
+ "batch_size": 1024,
+ "emb_municipio": 16
+}
