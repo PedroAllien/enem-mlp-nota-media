@@ -16,6 +16,11 @@ from enem.runs import load_results
 plots.setup()
 plt.rcParams.update({"font.size": 20, "axes.titlesize": 22, "axes.labelsize": 20, "xtick.labelsize": 18,
                      "ytick.labelsize": 18, "legend.fontsize": 18, "lines.linewidth": 3, "savefig.dpi": 200})
+# paleta dos slides: petróleo/ocre sobre creme (validada para daltonismo)
+SERIES = ["#0A9396", "#C27C0E"]
+CREME = "#F7F3EA"
+plt.rcParams.update({"axes.prop_cycle": plt.cycler(color=SERIES), "figure.facecolor": CREME,
+                     "axes.facecolor": CREME, "savefig.facecolor": CREME})
 OUT = C.FIG_DIR / "slides"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -30,7 +35,7 @@ d = load_year(2022)
 letras = list("ABCDEFGHIJKLMNOPQ")
 g = d.groupby("Q006")[C.TARGET].mean().reindex(letras)
 fig, ax = plt.subplots(figsize=(8, 6.2))
-ax.plot(range(17), g.values, color=SERIES[0], marker="o", markersize=9, markeredgecolor=plots.SURFACE, markeredgewidth=2)
+ax.plot(range(17), g.values, color=SERIES[0], marker="o", markersize=9, markeredgecolor=CREME, markeredgewidth=2)
 ax.axhline(d[C.TARGET].mean(), color=MUTED, linewidth=1.5)
 ax.text(16.3, d[C.TARGET].mean() - 4, "média geral", color=INK_2, fontsize=16, ha="right", va="top")
 ax.text(0, g.iloc[0] - 9, f"{g.iloc[0]:.0f}", ha="center", va="top", fontsize=20, color=INK_2)
@@ -62,7 +67,7 @@ fig, ax = plt.subplots(figsize=(8, 6.2))
 y = np.arange(len(var))
 for i, (esc, rot) in enumerate([("n20k", "20 mil exemplos"), ("n500k", "500 mil exemplos")]):
     vals = [reg[f"{esc}_{v}"]["val"]["rmse"] for v, _ in var]
-    ax.scatter(vals, y + (i - 0.5) * 0.3, s=180, color=SERIES[i], edgecolor=plots.SURFACE, linewidth=2, zorder=3, label=rot)
+    ax.scatter(vals, y + (i - 0.5) * 0.3, s=180, color=SERIES[i], edgecolor=CREME, linewidth=2, zorder=3, label=rot)
 ax.set_yticks(y, [r for _, r in var]); ax.invert_yaxis()
 ax.set_xlabel("RMSE de validação do modelo final (pontos)"); ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, frameon=False)
 ax.grid(axis="y", visible=False)
