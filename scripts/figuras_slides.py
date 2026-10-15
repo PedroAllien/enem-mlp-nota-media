@@ -99,3 +99,18 @@ ax.annotate(f"{dec['vies'].iloc[-1]:.0f}", (9, (dec["nota_real"].iloc[-1] + dec[
             textcoords="offset points", fontsize=20, color=INK_2, va="center", ha="right")
 save(fig, "decis")
 print(json.dumps({"renda_A": round(g.iloc[0]), "renda_Q": round(g.iloc[-1])}))
+
+# 6) curvas das três arquiteturas finais (semente 0) — gap final é a média das 3 sementes
+fin = {r["name"]: r for r in load_results("finais")}
+modelos = [("A_melhor", "A · melhor (2×658)"), ("B_compacta", "B · compacta (1×173)"), ("C_contraste", "C · profunda (380→47)")]
+fig, axes = plt.subplots(1, 3, figsize=(15, 4.6), sharey=True)
+for ax, (m, rot) in zip(axes, modelos):
+    h = pd.DataFrame(fin[f"{m}_seed0"]["history"])
+    gap = np.mean([fin[f"{m}_seed{s}"]["history"][-1]["val_rmse"] - fin[f"{m}_seed{s}"]["history"][-1]["train_rmse"] for s in range(3)])
+    ax.plot(h["epoch"], h["train_rmse"], color=SERIES[0], label="treino")
+    ax.plot(h["epoch"], h["val_rmse"], color=SERIES[1], label="validação")
+    ax.set_title(rot, fontsize=22); ax.set_xlabel("Época")
+    ax.text(0.97, 0.93, f"gap final {gap:.1f}".replace(".", ","), transform=ax.transAxes, ha="right", va="top", fontsize=20, color=INK_2)
+axes[0].set_ylabel("RMSE (pontos)"); axes[0].set_ylim(66.5, 70.5); axes[0].legend(loc="lower left")
+fig.tight_layout()
+save(fig, "finais")
