@@ -9,3 +9,6 @@ data/
 outputs/predicoes_*.parquet
 ~$*.docx
 relatorio/gerador/node_modules/
+# material de preparo da apresentação (fica fora do repositório)
+relatorio/Resumo_Apresentacao_*.docx
+relatorio/Roteiro_Apresentacao_*.pdf

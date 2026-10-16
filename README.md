@@ -2,6 +2,8 @@
 
 Trabalho prático da disciplina de Deep Learning (frente **3.1 – Multilayer Perceptrons**).
 
+**Integrantes:** João Paulo Monteiro, Pedro Felipe De Moraes Carrijo e Rogérios dos Anjos.
+
 **Problema.** Prever a nota média de um participante do ENEM (média de Ciências da Natureza, Ciências Humanas,
 Linguagens, Matemática e Redação) usando **só informações disponíveis antes da prova**: questionário
 socioeconômico da inscrição, situação escolar, faixa etária e local da prova. Regressão; unidade de observação = participante.
